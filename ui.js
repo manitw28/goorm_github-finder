@@ -18,9 +18,9 @@ class UI {
                         <span class="badge badge-info">Following: ${user.following}</span>
                         <br><br>
                         <ul class="list-group">
-                            <li class="list-group-item">Company: ${user.company}</li>
-                            <li class="list-group-item">Website/Blog: ${user.blog}</li>
-                            <li class="list-group-item">Location: ${user.location}</li>
+                            <li class="list-group-item">Company: ${user.company === null ? "무소속" : user.company}</li>
+                            <li class="list-group-item">Website/Blog: ${user.blog === "" || user.blog === null ? "공사중" : user.blog}</li>
+                            <li class="list-group-item">Location: ${user.location === null ? "어딘가" : user.location}</li>
                             <li class="list-group-item">Member Since: ${user.created_at}</li>
                         </ul>
                     </div>
@@ -43,7 +43,7 @@ class UI {
                     </div>
                     <div class="col-md-6">
                         <span class="badge badge-primary">Stars: ${repo.stargazers_count}</span>
-                        <span class="badge badge-secondary">Watchers: ${repo.watchers_count}</span>ß
+                        <span class="badge badge-secondary">Watchers: ${repo.watchers_count}</span>
                         <span class="badge badge-success">Forks: ${repo.forms_count}</span>
                     </div>
                 </div>
