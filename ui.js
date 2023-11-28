@@ -19,9 +19,9 @@ class UI {
                         <br><br>
                         <ul class="list-group">
                             <li class="list-group-item">Company: ${user.company === null ? "무소속" : user.company}</li>
-                            <li class="list-group-item">Website/Blog: ${user.blog === "" || user.blog === null ? "공사중" : user.blog}</li>
+                            <li class="list-group-item">Website/Blog: ${user.blog === "" ? "공사중" : user.blog}</li>
                             <li class="list-group-item">Location: ${user.location === null ? "어딘가" : user.location}</li>
-                            <li class="list-group-item">Member Since: ${user.created_at}</li>
+                            <li class="list-group-item">Member Since: ${(user.created_at).substr(0, 10)}</li>
                         </ul>
                     </div>
                 </div>
